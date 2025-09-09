@@ -68,6 +68,17 @@ body, .contact-input, .contact-textarea  {
     background-color: #dddddd;
 }
 
+.form-instructions{
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+.error-message{
+    color: red;
+    font-size: 0.9em;
+    margin-top: 2px;
+}
 
 /* 
 Current issues:

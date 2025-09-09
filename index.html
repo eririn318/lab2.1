@@ -16,33 +16,47 @@
     <main id="main">
       <!-- Form section -->
       <div class="contact-form-section">
-        <form>
+        <!--added aria here Q2-->
+        <form aria-live="polite">
           <h1 class="contact-form-heading">Reach <span>Out</span></h1>
           <div class="contact-form-intro">
             Curious about something? Complete these fields and "get in touch",
             as you humans say. 🤙
           </div>
+
+          <label for="name">Full name</label>
+          <div id="name-instructions" class="form-instructions">Enter your full name</div>
+          <div id="name-error" class="error-message" style="display: none;"></div>
           <input
             class="contact-input"
             id="name"
             type="text"
             placeholder="Eriko Kan"
+            aria-describedby="name-instructions name-error"
           />
-          <label for="name">Full name</label>
+        
+          <label for="email">Email</label>
+          <div id="email-instructions" class="form-instructions">We'll never share your email address</div>
+          <div id="email-error" class="error-message" style="display: none;"></div>
           <input
             class="contact-input"
-            id="name"
+            id="email"
             type="text"
             placeholder="eririn75@hotmail.com"
+            aria-describedby="email-instructions email-error"
           />
-          <label for="email">Email</label>
+          
+          <div id="message-instructions" class="form-instructions">Tell us what you're curious about</div>
+          <div id="message-error" class="error-message" style="display: none;"></div>
           <textarea
             class="contact-textarea"
             id="message"
             rows="4"
             cols="50"
             placeholder="Your message..."
+            aria-describedby="message-instructions message-error"
           ></textarea>
+
           <button
             class="contact-submit-button"
             type="button"
@@ -51,6 +65,7 @@
             Send message🎉
           </button>
         </form>
+
         <img
           class="contact-image"
           src=""
